@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player;
-    
-    private void FixedUpdate()
-    {
-        
-    }
+    public Transform pato;
+
+    private void FixedUpdate ()
+{
+	transform.position = Vector2.Lerp (transform.position, pato.position, 0.1f);
+}
     
 }
