@@ -23,7 +23,10 @@ public class Pato : MonoBehaviour
 
     void Move () 
     {
-
+        if (Input.GetKey (KeyCode.RightArrow))
+        {
+            rigidbody.velocity = Vector2.right * speed;
+        }
     }
 
     void Jump () 
