@@ -5,7 +5,8 @@ using UnityEngine;
 public class Pato : MonoBehaviour
 {
     public float speed;
-    public bool isJumping;
+    public float JumpForce;
+
     private Rigidbody2D rigidbody;
 
     // Start is called before the first frame update
@@ -23,14 +24,15 @@ public class Pato : MonoBehaviour
 
     void Move () 
     {
-        if (Input.GetKey (KeyCode.RightArrow))
-        {
-            rigidbody.velocity = Vector2.right * speed;
-        }
+        Vector3 movement = new Vector3 (Input.GetAxis("Horizontal"), 0f, 0f);
+        transform.position += movement * Time.deltaTime * speed;
     }
 
     void Jump () 
     {
-        
+        if (Input.GetButtonDown ("Jump")) 
+        {
+            rigidbody.AddForce (new Vector2 (0f, JumpForce), ForceMode2D.Impulse);
+        }
     }
 }
