@@ -11,9 +11,9 @@ public class Grounded : MonoBehaviour
         Player = gameObject.transform.parent.gameObject.GetComponent <Pato> ();
     }
 
-    void OnCollisionEnter2D (Collision2D collisor) 
+    void OnCollisionEnter2D (Collision2D collisor)
     {
-        if (collisor.gameObject.layer == 8) 
+        if (collisor.gameObject.layer == 8)
         {
             Player.isJumping = false;
         }
@@ -22,10 +22,11 @@ public class Grounded : MonoBehaviour
 
     void OnCollisionExit2D (Collision2D collisor)
     {
-        if (collisor.gameObject.layer == 8) 
+        if (collisor.gameObject.layer == 8)
         {
             Player.isJumping = true;
         }
     }
 
 }
+

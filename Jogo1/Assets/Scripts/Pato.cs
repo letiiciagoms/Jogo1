@@ -23,7 +23,7 @@ public class Pato : MonoBehaviour
         Jump ();
     }
 
-    void Move () 
+    void Move ()
     {
         Vector3 movement = new Vector3 (Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += movement * Time.deltaTime * speed;
@@ -41,11 +41,12 @@ public class Pato : MonoBehaviour
         }
     }
 
-    void Jump () 
+    void Jump ()
     {
-        if (Input.GetButtonDown ("Jump") && !isJumping) 
+        if (Input.GetButtonDown ("Jump") && !isJumping)
         {
             rigidbody.AddForce (new Vector2 (0f, JumpForce), ForceMode2D.Impulse);
         }
     }
 }
+
