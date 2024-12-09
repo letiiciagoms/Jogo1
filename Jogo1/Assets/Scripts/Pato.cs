@@ -48,5 +48,7 @@ public class Pato : MonoBehaviour
             rigidbody.AddForce (new Vector2 (0f, JumpForce), ForceMode2D.Impulse);
         }
     }
+
+    
 }
 

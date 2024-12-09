@@ -18,6 +18,12 @@ public class Grounded : MonoBehaviour
             Player.isJumping = false;
         }
 
+         if (collisor.gameObject.tag == "Jacaré")
+        {
+           GameController.instance.ShowGameOver();
+           Destroy(gameObject);
+        }
+
     }
 
     void OnCollisionExit2D (Collision2D collisor)
@@ -26,6 +32,8 @@ public class Grounded : MonoBehaviour
         {
             Player.isJumping = true;
         }
+
+       
     }
 
 }
