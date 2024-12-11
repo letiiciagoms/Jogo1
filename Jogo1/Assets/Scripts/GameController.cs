@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
    public GameObject gameOver;
+   public GameObject Vitoria;
    public static GameController instance;
 
    void Start()
@@ -23,5 +24,13 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(lvlName);
     }
 
+    public void ShowVitoria ()
+    {
+        Vitoria.SetActive (true);
+    }
 
+    public void LoadScene (string lvlName)
+    {
+        SceneManager.LoadScene (lvlName);
+    }
 }

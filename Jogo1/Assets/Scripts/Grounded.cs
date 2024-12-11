@@ -24,6 +24,14 @@ public class Grounded : MonoBehaviour
            Destroy(gameObject);
         }
 
+         if (collisor.gameObject.tag == "Mãe")
+        {
+           GameController.instance.ShowVitoria();
+
+        }
+
+
+
     }
 
     void OnCollisionExit2D (Collision2D collisor)
