@@ -29,8 +29,9 @@ public class GameController : MonoBehaviour
         Vitoria.SetActive (true);
     }
 
-    public void LoadScene (string lvlName)
+    public void MenuGame (string lvlName)
     {
         SceneManager.LoadScene (lvlName);
     }
+
 }
