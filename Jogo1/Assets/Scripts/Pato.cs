@@ -48,5 +48,20 @@ public class Pato : MonoBehaviour
             rigidbody.AddForce (new Vector2 (0f, JumpForce), ForceMode2D.Impulse);
         }
     }
+
+    void OnCollisionEnter2D (Collision2D collisor)
+    {
+
+         if (collisor.gameObject.tag == "Jacaré")
+        {
+           GameController.instance.ShowGameOver();
+           Destroy(gameObject);
+
+        }
+
+         
+        
+
+    }
 }
 

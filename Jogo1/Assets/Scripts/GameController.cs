@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
    public GameObject Vitoria;
    public static GameController instance;
 
+
    void Start()
    {
      instance = this;
@@ -29,9 +30,11 @@ public class GameController : MonoBehaviour
         Vitoria.SetActive (true);
     }
 
-    public void MenuGame (string lvlName)
+    public void PainelVitoria (string lvlName)
     {
         SceneManager.LoadScene (lvlName);
     }
+
+    
 
 }

@@ -18,18 +18,6 @@ public class Grounded : MonoBehaviour
             Player.isJumping = false;
         }
 
-         if (collisor.gameObject.tag == "Jacaré")
-        {
-           GameController.instance.ShowGameOver();
-           Destroy(gameObject);
-        }
-
-         if (collisor.gameObject.tag == "Mãe")
-        {
-           GameController.instance.ShowVitoria();
-
-        }
-
 
 
     }
