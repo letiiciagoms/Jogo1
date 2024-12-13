@@ -18,10 +18,6 @@ public class MenuPrincipalManager : MonoBehaviour
         Application.Quit ();
     }
 
-    public void Menu ()
-    {
-         SceneManager.LoadScene(lvlName);
-    }
 
 
 }
